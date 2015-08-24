@@ -1,0 +1,31 @@
+﻿/*********************************************************************************
+					
+MEMORY GAME
+
+developed by: Daniel Oliveira 2013 
+ 
+
+INSTALL INSTRUCTIONS	
+
+
+*********************************************************************************/
+
+
+Requirements:
+
+You must have an Apache+PHP+MySQL environment setup
+
+
+Steps:
+
+1.	Import the database from the .sql.gz file
+
+2.	Extract the files and go to “serverside/config.php” and set the database 	settings according.
+
+
+3. 	Go to “memorygame.js” and check the current_url variable and change it if 	needed.
+
+ 
+
+
+That's it!  
