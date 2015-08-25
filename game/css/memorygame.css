@@ -10,18 +10,13 @@ body {
 /*-----------------------------------------------
 	Card related classes
 -----------------------------------------------*/
-
-
 .card-instance {
 	display:inline-table;
 	position:relative;
 	cursor:pointer;
 	margin:0px 5px 0px 5px;
 	outline: solid 1px white;
-	
-	
 }
-
 
 #highscores{
 	color:white;
@@ -31,13 +26,10 @@ body {
 
 #highscores > span {
 	width:100%;
-	
 	display:block;
 	background-color:#2167a2;
 	margin:1px 0px 1px 0px;
-
 }
-
 
 #card-wrapper {
 	display: inline-table;
@@ -78,13 +70,14 @@ body {
 -----------------------------------------*/
 
 #timer{
-font-size:18px;
-color:white;
-font-weight:bold;
-	
+	font-size:18px;
+	color:white;
+	font-weight:bold;	
 }
 
-#timer-wrapper { margin:45px 0px 0px 30px; }
+#timer-wrapper { 
+	margin:45px 0px 0px 30px; 
+}
 
 /*------------------------------------------------------
 
@@ -92,7 +85,9 @@ font-weight:bold;
 
 ----------------------------------------------------*/
 
-#main-container{ width:100%; }
+#main-container{ 
+	width:100%; 
+}
 
 .blue {
 	background-color:#5070a9;
@@ -106,15 +101,11 @@ font-weight:bold;
 	border-radius: 10px;
 	box-shadow: 1px 5px 25px black;
 	position:relative;
-
 }
-
 .letter {
 	font-size:14px;
 	color:white;
 }
-
-
 #game-title {
 	width:720px;
 	height:50px;
@@ -161,8 +152,6 @@ font-weight:bold;
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	
-
 }
 
 .highscore-user{
@@ -171,7 +160,6 @@ font-weight:bold;
 	background-color: #2167a2;
 	margin-bottom:1px;
 }
-
 
 .more-users {
 	width:auto;
@@ -233,7 +221,6 @@ font-weight:bold;
 	position:absolute;
 	bottom:10px;
 	text-align:center;
-	
 	background: #ea5507; /* Old browsers */
 	background: -moz-linear-gradient(top,  #ea5507 3%, #fb955e 98%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(3%,#ea5507), color-stop(98%,#fb955e)); /* Chrome,Safari4+ */
@@ -244,23 +231,19 @@ font-weight:bold;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea5507', endColorstr='#fb955e',GradientType=0 ); /* IE6-9 */
 	font-family:Calibri;
 	font-weight:bold;
-	
 	margin-left:10px;
-	
 }
 
 .button:hover {
-
 	text-shadow:2px 2px 2px gray;
 	background: #fb955e; /* Old browsers */
-background: -moz-linear-gradient(top,  #fb955e 7%, #ea5507 90%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(7%,#fb955e), color-stop(90%,#ea5507)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #fb955e 7%,#ea5507 90%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #fb955e 7%,#ea5507 90%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #fb955e 7%,#ea5507 90%); /* IE10+ */
-background: linear-gradient(to bottom,  #fb955e 7%,#ea5507 90%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb955e', endColorstr='#ea5507',GradientType=0 ); /* IE6-9 */
-	
+	background: -moz-linear-gradient(top,  #fb955e 7%, #ea5507 90%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(7%,#fb955e), color-stop(90%,#ea5507)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fb955e 7%,#ea5507 90%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fb955e 7%,#ea5507 90%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fb955e 7%,#ea5507 90%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fb955e 7%,#ea5507 90%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb955e', endColorstr='#ea5507',GradientType=0 ); /* IE6-9 */
 }
 
 /*----------------------------------------------------------------
@@ -295,7 +278,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb955e', end
 	float:left;	
 }
 
-
 #help-icon {
 	position: absolute;
 	color: white;
@@ -310,24 +292,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb955e', end
 	font-family:Arial;
 }
 
-
 #help-icon:hover {
 	color:black;
 	background-color:white;
 }
 
-
-
-/*
+/* ====================
 	User Input
-*/
+=====================*/
 
 #user-input {
 	opacity:0;
 	display:none;
 }
-
-
 
 #lostgame-wrapper,
 #rules,
@@ -491,14 +468,3 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb955e', end
 	text-align:center;
 	margin:15px 0px 10px 0px;
 }
-
-
-
-
-
-
-
-
-
-
-

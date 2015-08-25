@@ -82,9 +82,6 @@ var renderMan; // view based class to refresh the dom element
 var controller; // controls the flow of the game
 var cardCollection; // stores all the cards
 
-
-
-
 /*-------------------------------------------------
  * 
  * 	Animation Related functions
@@ -93,12 +90,6 @@ var cardCollection; // stores all the cards
  -------------------------------------------------*/
 function inputFocusIn(event){ event.srcElement.value =""; }
 function inputFocusOut(event){ }
-
-
-
-
-
-
 
 /*	Name: 			allScoresAjax
  * 	Description: 	Inserts the Allscores field on the view
@@ -131,8 +122,6 @@ function highScoresAjax(){
 		});
 
 }  // highScores Ajax
-
-
 
 /*
  * 	Name: VerifyEmail
@@ -187,8 +176,6 @@ function bind_start_click_event() {
 			init_game();
 			
 		} 
-		
-
 		repeat_game =true;
 		this.innerHTML= "Restart Game";
 		game_active_base = true;
@@ -201,9 +188,6 @@ function bind_start_click_event() {
 	};
 	
 } //restart click event ends here
-
-
-
 
 
 /*
@@ -230,22 +214,14 @@ function bind_saveuser_click_event() {
 			return false;
 		
 		}  //save user button clickends here
-	
 	};
-	
-	
 } //restart click event ends here
 
-
-
-
 /*
- * 	Name: 		debug
+ * 	Name: debug
  * 	Description:
  */
 function debug(string){ if(window.console && debug_status ==true) console.log(string); }
-
-
 
 /*
  * 	Name: press_action
@@ -256,20 +232,21 @@ function press_action(){
 	
 	if(!gamecontroller.maxClicks()){
 			
-		
 		var card= cardCollection.getCardById(gameview.getSelectedCardId());
 
-		
-		if(!card.isActive()){ gameview.updateGameInfo('You already found this Card. Select another one!'); }
+		if(!card.isActive()) { 
+			gameview.updateGameInfo('You already found this Card. Select another one!'); 
+		}
 		
 		else {
 		 gameview.updateClickStatus(card.id);
 
-		 	if(gamecontroller.isClicked(card)) gameview.updateGameInfo('Card has already been selected. Select another one!');
+		 	if(gamecontroller.isClicked(card))  {
+		 		gameview.updateGameInfo('Card has already been selected. Select another one!');
+		 	}
 			
 			else {
-				
-		
+			
 				gamecontroller.addClickedCard(card);
 
 				if(gamecontroller.clickCountEnd()){  //clicked two cards can compare
@@ -284,8 +261,7 @@ function press_action(){
 							gameview.endGame('won');
 						}
 						
-						else {
-							
+						else {	
 							//update interface
 							gameview.updateCardContainer('win',gamecontroller.getClickedCards()); // open cards to user
 							gameview.updateGameInfo('You got the color right! Great!');	
@@ -296,38 +272,24 @@ function press_action(){
 					} //compare Cards ends here
 					
 					else{
-						
 						gameview.updateCardContainer('lost',gamecontroller.getClickedCards()); // open cards to user
 						gameview.cleanGameInfo();
 						gameview.updateGameInfo('Nop bad guess!');	
-						gamecontroller.resetCards(); //reset game controller
-						
-						
+						gamecontroller.resetCards();
 					} 
 					
 				} //if ends here
 				
 				else {
-			
 					gameview.updateGameInfo('Select one more...');
 				}
-				
-
 			} //else ends here
 			
-
-		 	
-		 	
-			} // if the card is active or not really
-		 	
-		 	
-			} //max clicks
+		} // if the card is active or not really
+		 		 	
+	} //max clicks
 	
-	
-
-
 }  //bind_square_click_event
-
 
 
 
@@ -339,7 +301,6 @@ function press_action(){
  */
 function setup_data(){
 	
-	
 	 var image_temp;
 	 var unique_index=1;
 	 
@@ -347,7 +308,7 @@ function setup_data(){
 		
 		 // build basic info data
 		 
-		 for(var i=0;i<2;i++){
+		 for(var i=0;i<2;i++) {
 			 var image_id = imageInstance;
 			 image_temp = new Image(); 
 			 image_temp.src = images_url+"/"+images_info[imageInstance];
@@ -360,10 +321,7 @@ function setup_data(){
 		
 			 unique_index++;
 		 } 
-		 
-	 } //for ends here
-	
-	
+	 } //for ends here	
 }
 	
 
@@ -377,10 +335,8 @@ function setup_objects_data(){
 	
 	 // fill objects
 	 cardCollection.setShuffleCollection(randomMan.shuffle(cardCollection.getCollection())); 
-	 
 	 gameview.fillCardContainer(cardCollection.getShuffleCollection());
-
-	 
+	 // Set cards
 	 gameview.setCards(cardCollection.getCollectionIds());  //stores cached id's for quicker dom manipulation
 	 gameview.setSelectedCard(0); //sets card index 1 as the first selected 
 	 
@@ -396,55 +352,23 @@ function setup_objects_data(){
  * 
  */
 function reset_game(){
-	
 	init_game();
-	
-	
-	
-	
-	/*
-	gamecontroller.resetController();
-	gameview.resetView();
-	
-	cardCollection.setShuffleCollection(randomMan.shuffle(cardCollection.getCollection())); 
-	gameview.fillCardContainer(cardCollection.getShuffleCollection());
-	gameview.setCards(cardCollection.getCollectionIds());  //stores cached id's for quicker dom manipulation
-	gameview.setSelectedCard(0); //sets card index 1 as the first selected 
-	gameview.updateGameInfo('Game has restarted!');
-	*/
-	
-	
 }
-
-
-
 
 /*
  * 	Name: setup_objects
- * 
- * 
  */
 function setup_objects(){
 
 	// operation related object
-	
 	randomMan= new RandomMan();
-
 	
 	// loosely approach on the mvc pattern
-	
 	gamecontroller 	= new GameController();  		// controller   
-	
 	cardCollection 	= new CardCollection(); 		// stores data
-	
 	gameview 		= new GameView(numberRows,cardwrapper_id,gameinfo_id,restartbutton_id,timer_id,input_id,inputname_id,inputmail_id, userwarning_id);	// view
-	
-
-	
+		
 }
-
-
-
 
 /*
  * 
@@ -459,11 +383,7 @@ function init_game(){
 	setup_objects();
 	setup_data();
 	setup_objects_data();
-
-	
 }
-
-
 
 
 function bind_button_events(){
@@ -474,49 +394,37 @@ function bind_button_events(){
 }
 
 
-
 /*
  * 	Name: Display Key
  * 	Description: Listens to the keyboard events 
  * 	and calls the appropriate function or object
  */
 function DisplayKey(event){
-
-
+	
 	if(game_active_base==true){
-	
-	for(var key in keys_arrow) {
-	
-		if(keys_arrow[key]===event.which) {
-			
-			if(key === 'enter') press_action();
-			
-			else  gameview.moveCard(key);
-
-		}
-	}	
-		
+		for(var key in keys_arrow) {
+			if(keys_arrow[key]===event.which) {
+				if(key === 'enter') {
+					press_action();
+				}
+				else {
+					gameview.moveCard(key);
+				}
+			}
+		}	
 	}
-
 }  //DisplayKey ends here
-
-
 
 
 /* 
  *  Operations done after the full document is loaded
  */
 window.onload=function(){
-	
-
-	
 	init_game();
 	bind_button_events();
 	
 	//rules
-	if(!gamecontroller.isOldUser())  gameview.displayRules();
-
-	
+	if(!gamecontroller.isOldUser())  gameview.displayRules();	
 	//fetch_high_scores();
 	highScoresAjax();
 	//fetch top 10 scores

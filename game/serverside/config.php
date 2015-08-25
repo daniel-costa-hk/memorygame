@@ -5,12 +5,9 @@
  * 	
  * 
  */
-define("__DBNAME__", "memorygame");
+define("__DBNAME__", "memorygame2");
 define("__USER__", "root");
 define("__PASS__", "");
 define("__SERVER__", "localhost");
-
-
-
 
 ?>
