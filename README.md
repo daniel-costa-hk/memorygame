@@ -1,5 +1,6 @@
 # Memory Game
 A match color memory done in native Javascript with an MVC pattern.
+A good practice to understand native javascript behaviour ;-)
 
 # Tech Kit
 MySQL <br />
@@ -21,20 +22,9 @@ A memory color webgame with highscores registry and keyboard control interface.
 
 * Install database sql/db.sql.gz
 * Edit database parameters @ serverside/config.php
-
-> You’re running! (If any issues, check the console for any errors.)
-
-> The application will create a user collection on Mongo DB. <br />
-> Configure the settings in lib/config/development.json & lib/config/production.json <br />
-> Setup the email account router to send the email (Google mail by default) <br />
->> Note: If you use your own account for testing purposes please read:
->> https://support.google.com/accounts/answer/6010255?hl=en
+* Setup a localhost with f.e. Apache2+Php
 
 ### Windows
 Not really sure :_)
-
-# License
-
-GNU General Public License
 
 
