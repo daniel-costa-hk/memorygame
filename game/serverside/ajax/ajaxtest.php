@@ -2,7 +2,7 @@
 /***************************************
  * 
  * 	Name: 				Scores
- * 	Description: 	returns top 3 highscores
+ * 	Description: 	Returns top 3 highscores
  * 
  * 
  ***************************************/

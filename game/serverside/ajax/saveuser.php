@@ -1,8 +1,8 @@
 <?php
 /***************************************
  * 
- * 	Name: 			scores
- * 	Description: 	returns top 3 highscores
+ * 	Name: 				Scores
+ * 	Description: 	Returns top 3 highscores
  * 
  * 
  ***************************************/

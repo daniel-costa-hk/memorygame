@@ -5,7 +5,7 @@
  * 	
  * 
  */
-define("__DBNAME__", "memorygame2");
+define("__DBNAME__", "mg");
 define("__USER__", "root");
 define("__PASS__", "");
 define("__SERVER__", "localhost");

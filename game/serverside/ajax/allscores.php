@@ -1,13 +1,12 @@
 <?php
 /***************************************
  * 
- * 	Name: 			scores
- * 	Description: 	returns top 3 highscores
+ * 	Name: 			  Scores
+ * 	Description: 	Returns top 3 highscores
  * 
  * 
  ***************************************/
 
-	
 	require_once('../php_classes.php');
 	require_once('../config.php');
 	
@@ -15,9 +14,6 @@
 	$connector = new Connector(__SERVER__,__USER__,__PASS__,__DBNAME__);
 	$output =  $connector->RunQuery($query);
 	
-
 	echo json_encode($output);
-
- 
 
 ?>
