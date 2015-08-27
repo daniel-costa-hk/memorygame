@@ -8,7 +8,8 @@ PHP<br />
 CSS Javascript MVC (Prototype) <br />
 
 # Description
-A memory color webgame with highscores registry and keyboard control interface.
+A memory color webgame with highscores registry and keyboard control interface. <br />
+working example @ http://memorygame.webdaniel.net/
 
 # Snapshots
 
